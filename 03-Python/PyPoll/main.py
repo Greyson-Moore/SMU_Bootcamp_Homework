@@ -1,32 +1,34 @@
 import os
 import csv
 
+
 csvPath = os.path.join("Resources","election_data.csv")
 
+#Variable Initialization
 row = []
-county = []
 candidate = []
 allList = []
 voteTotal = 0
-
+#CSV read in
 with open(csvPath) as csvfile:
     csvReader = csv.reader(csvfile, delimiter=',')
     csvHeader = next(csvReader)
     for row in csvReader:
-        #voterID.append(row[0])
-        #county.append(row[1])
         candidate.append(row[2])
         allList.append(row)
         voteTotal += 1
 
+#Finding unique candidates
 uniqueSet = set(candidate)
 candidateUnique = list(uniqueSet)
 
+#Candidate votes intialization
 candidate1 = 0
 candidate2 = 0
 candidate3 = 0
 candidate4 = 0
 
+#Loop to count candidates' votes
 for i in range((len(candidate))):
     if candidateUnique[0] == candidate[i]:
         candidate1 += 1
@@ -37,7 +39,7 @@ for i in range((len(candidate))):
     elif candidateUnique[3] == candidate[i]:
         candidate4 += 1 
 
-
+#Print results to terminal
 print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {voteTotal}")
@@ -62,7 +64,11 @@ elif winner == candidate4:
 
 print("-------------------------")
 
-with open('results.txt','w') as writer:
+
+outPath = os.path.join("Results","results.txt")
+
+#Print results to results.txt
+with open(outPath,'w') as writer:
     writer.write("Election Results\n")
     writer.write("-------------------------\n")
     writer.write(f"Total Votes: {voteTotal}\n")

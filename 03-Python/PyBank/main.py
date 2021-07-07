@@ -27,6 +27,7 @@ with open(csvPath) as csvfile:
 for i in range(len(money) - 1):
     currentChange = int(money[i+1]) - int(money[i])
     totalChange += currentChange
+    #Determine the greatest increase and decrease
     if currentChange > increaseGreatAmount:
         increaseGreatAmount = int(currentChange)
         increaseGreatMonth = month[i + 1]
@@ -47,14 +48,14 @@ print(f"Greatest Increase in Profits: {increaseGreatMonth} (${increaseGreatAmoun
 print(f"Greatest Decrease in Profits: {decreaseGreatMonth} (${decreaseGreatAmount})")
 print("----------------------------")
 
-
 #Print to results.txt file
-with open('results.txt','w') as writer:
+outPath = os.path.join("Results","results.txt")
+with open(outPath,'w') as writer:
 
     writer.write("Financial Analysis\n")
     writer.write("----------------------------\n")
     writer.write(f"Total Months: {monthTotal}\n")
-    writer.write(f"Total: ${profitTotal}")
+    writer.write(f"Total: ${profitTotal}\n")
     writer.write(f"Average Change: ${averageChange}\n")
     writer.write(f"Greatest Increase in Profits: {increaseGreatMonth} (${increaseGreatAmount})\n")
     writer.write(f"Greatest Decrease in Profits: {decreaseGreatMonth} (${decreaseGreatAmount})\n")
