@@ -1,34 +1,43 @@
-Departments
--
-dept_no varchar(15) pk
-dept_name varchar(30)
-
 dept_emp
 -
+id serial pk
+dept_no varchar(30) FK >- Department.dept_no
 emp_no int FK >- Employees.emp_no
-dept_no varchar(15) FK >- Departments.dept_no
+last_updated timestamp
 
 dept_manager
 -
-dept_no varchar(15) FK >- Departments.dept_no
+id serial pk
+dept_no varchar(10) FK >- Department.dept_no
 emp_no int FK >- Employees.emp_no
+last_updated timestamp
 
-Employees
+Department
 -
-emp_no int pk
-emp_title varchar(15) FK >- Titles.title_id
-birth_date varchar(30)
-first_name varchar(30)
-last_name varchar(30)
-sex varchar(10)
-hire_date varchar(30)
+dept_no varchar(10) pk
+dept_name varchar(30)
+last_updated timestamp
 
 Salaries
 -
+id serial pk
 emp_no int FK >- Employees.emp_no
 salary int
+last_updated timestamp
 
 Titles
 -
 title_id varchar(15) pk
 title varchar(30)
+last_updated timestamp
+
+Employees
+-
+emp_no int pk
+emp_title varchar(15) FK >- Titles.title_id
+birth_date datetime
+first_name varchar(50)
+last_name varchar(50)
+sex varchar(10)
+hire_date datetime
+last_updated timestamp
