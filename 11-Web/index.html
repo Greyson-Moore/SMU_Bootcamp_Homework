@@ -6,115 +6,131 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
 </head>
 
+<body style="background-color: lightgray;">
 
-<body>
 
-    <div class="container">
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Weather Data Home</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+              
+                  <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Home
+                          <span class="visually-hidden">(current)</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-sm-2" type="text" placeholder="Search">
+                      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+            </nav>
+            <br>
+            <br>
 
-        <!-- Nav Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Weather Data Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-          
-              <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav me-auto">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Home
-                      <span class="visually-hidden">(current)</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Separated link</a>
+
+
+
+
+
+
+
+
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container-fluid bg-secondary">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Summary</h1>
+                        </div>
                     </div>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-sm-2" type="text" placeholder="Search">
-                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-        </nav>
-        <br>
-        <br>
-        <!-- Row 1 -->
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Home</h1>
-          </div>
-        </div>
-        <hr size="1000" noshade>
-        <br>
-        <br>
-        <!-- Row 2 -->
-        <div class="row">
-            <div class="col-md-6">
-                <h2 class="text-primary"><strong>Summary:</strong></h2>
-            </div>
-        </div>
-        <br>
-        <!-- Row 3 -->
-        <div class="row">
-            <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lobortis lacus. Nullam eu orci urna. Etiam at libero dui. Maecenas porttitor id arcu id tincidunt. Aliquam nec luctus sapien. Etiam sagittis non dui in facilisis. Ut fermentum hendrerit velit, posuere scelerisque odio iaculis eget. Integer vel malesuada libero. Integer vel nisl eu sapien congue fringilla. Duis et lectus ac lacus tempus consectetur vel ac diam. Nam sed mi quis risus vulputate ultricies. Interdum et malesuada fames ac ante ipsum primis in faucibus. In non elit vel ipsum lobortis blandit.<br><br> &emsp; &emsp; &emsp;
+                    <div class="row">
+                        <br><br><br>
+                    </div>
+                    <div class="row " >
+                        <div class="col-md-4 ">
+                            <img height="75%" width="100%" src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Temp_Scatter.png?raw=true" alt="Latitude vs. Temp">                        </div>
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lobortis lacus. Nullam eu orci urna. Etiam at libero dui. Maecenas porttitor id arcu id tincidunt. Aliquam nec luctus sapien. Etiam sagittis non dui in facilisis. Ut fermentum hendrerit velit, posuere scelerisque odio iaculis eget. Integer vel malesuada libero. Integer vel nisl eu sapien congue fringilla. Duis et lectus ac lacus tempus consectetur vel ac diam. Nam sed mi quis risus vulputate ultricies. Interdum et malesuada fames ac ante ipsum primis in faucibus. In non elit vel ipsum lobortis blandit.<br><br> &emsp; &emsp; &emsp;</p>
+                            <p>Pellentesque purus nulla, facilisis eget rutrum non, venenatis quis mauris. Phasellus blandit volutpat orci id dictum. Aenean nisi neque, tristique sit amet justo eget, venenatis dapibus turpis. Suspendisse vel orci fringilla magna facilisis porta et nec enim. Pellentesque cursus, libero id dapibus lobortis, nisi justo dignissim sapien, eu efficitur nulla eros sed orci. Sed aliquet quis mauris id venenatis. Suspendisse et suscipit sapien. Nunc non cursus dolor. Curabitur et neque dignissim, cursus nisl et, facilisis turpis. Sed iaculis eget sapien vitae tempor. Donec malesuada ante metus, et consequat nisl eleifend quis. Mauris scelerisque tellus et mi vestibulum, in elementum quam aliquet. Proin fringilla nibh et lectus fringilla imperdiet. Vivamus eget metus faucibus, blandit elit nec, volutpat lorem. </p>
 
-                    Pellentesque purus nulla, facilisis eget rutrum non, venenatis quis mauris. Phasellus blandit volutpat orci id dictum. Aenean nisi neque, tristique sit amet justo eget, venenatis dapibus turpis. Suspendisse vel orci fringilla magna facilisis porta et nec enim. Pellentesque cursus, libero id dapibus lobortis, nisi justo dignissim sapien, eu efficitur nulla eros sed orci. Sed aliquet quis mauris id venenatis. Suspendisse et suscipit sapien. Nunc non cursus dolor. Curabitur et neque dignissim, cursus nisl et, facilisis turpis. Sed iaculis eget sapien vitae tempor. Donec malesuada ante metus, et consequat nisl eleifend quis. Mauris scelerisque tellus et mi vestibulum, in elementum quam aliquet. Proin fringilla nibh et lectus fringilla imperdiet. Vivamus eget metus faucibus, blandit elit nec, volutpat lorem. </p>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <br><br><br>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <img height=400px width=600px src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Temp_Scatter.png?raw=true" alt="Latitude vs. Temp">
-            </div> 
-        <br>
-        <br>
-        </div>
-        <!-- Row 4 -->
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-primary"><strong>Visualizations:</strong></h2>
-            </div>
-        <br>
-        <br> 
-        <br>
-        <br>   
-        </div>
-        <!-- Row 5 -->
-        <div class="row">
-            <div class="col-md-3">
-                <img height=200px width=300px src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Temp_Scatter.png?raw=true" alt="Latitude vs. Temp">
-
-            </div>
-            <div class="col-md-3">
-                <img height=200px width=300px src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Cloudiness_Scatter.png?raw=true" alt="Latitude vs. Cloud Scatter">
-
-            </div>
-            <div class="col-md-3">
-                <img height=200px width=300px src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Humidity_Scatter.png?raw=true" alt="Latitude vs. Humidity">
-
-            </div>
-            <div class="col-md-3">
-                <img height=200px width=300px src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Wind_Speed_Scatter.png?raw=true" alt="Latitude vs. Wind Speed">
-
+            <div class="col-md-4">
+                <div class="container-fluid bg-secondary">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Visualizations</h1>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img height="75%" width="90%" src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Temp_Scatter.png?raw=true" alt="Latitude vs. Temp">
+                        </div>
+                        <div class="col-md-6">
+                            <img height="75%" width="90%" src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Cloudiness_Scatter.png?raw=true" alt="Latitude vs. Cloud Scatter">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img height="75%" width="90%" src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Humidity_Scatter.png?raw=true" alt="Latitude vs. Humidity">
+                        </div>
+                        <div class="col-md-6">
+                            <img height="75%" width="90%" src="https://github.com/Greyson-Moore/SMU_Bootcamp_Homework/blob/main/06-Python-APIs/output_data/Lat_vs_Wind_Speed_Scatter.png?raw=true" alt="Latitude vs. Wind Speed">
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    
+
 
 
 
@@ -122,3 +138,5 @@
 
 
 </body>
+
+</html>
